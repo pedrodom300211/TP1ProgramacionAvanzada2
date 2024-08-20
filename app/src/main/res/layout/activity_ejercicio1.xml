@@ -22,17 +22,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="69dp"
         android:text="Primer Numero" />
 
     <EditText
         android:id="@+id/editTextText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_toEndOf="@id/textView2"
         android:layout_alignBaseline="@id/textView2"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="31dp"
+        android:layout_toEndOf="@id/textView2"
         android:ems="10"
         android:inputType="number" />
 
@@ -42,7 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textView2"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="13dp"
         android:text="Segundo Numero" />
 
     <EditText
@@ -50,9 +51,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView3"
-        android:layout_toEndOf="@id/textView3"
         android:layout_alignBaseline="@id/textView3"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="-3dp"
+        android:layout_toEndOf="@id/textView3"
         android:ems="10"
         android:inputType="number" />
 
@@ -64,5 +66,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="63dp"
+        android:text="Resultado" />
 
 </RelativeLayout>

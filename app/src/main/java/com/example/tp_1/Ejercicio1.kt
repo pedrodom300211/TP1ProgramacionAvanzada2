@@ -1,10 +1,15 @@
 package com.example.tp_1
 
 import android.os.Bundle
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Button
+import android.widget.TextView
+import android.view.View
+
 
 class Ejercicio1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +20,17 @@ class Ejercicio1 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        var edtNumero1 : EditText = findViewById(R.id.editTextText1)
+        var edtNumero2 : EditText = findViewById(R.id.editTextText2)
+        var btnSumar : Button = findViewById(R.id.button)
+        var txtResultado : TextView = findViewById(R.id.txt_resultado)
+
+        btnSumar.setOnClickListener{
+            var n1=edtNumero1.text.toString().toInt()
+            var n2=edtNumero2.text.toString().toInt()
+            var res=n1+n2
+            txtResultado.text=res.toString()
         }
     }
 }
