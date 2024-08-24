@@ -34,7 +34,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="67dp"
         android:background="@drawable/formato_boton"
-        android:backgroundTint="#6F6E6E"
         android:text="@string/ejercicio_2" />
 
     <TextView
