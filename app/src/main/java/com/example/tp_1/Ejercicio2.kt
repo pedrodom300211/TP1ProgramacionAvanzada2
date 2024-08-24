@@ -33,6 +33,7 @@ class Ejercicio2 : AppCompatActivity() {
         }
         val btn_Igual: Button = findViewById(R.id.btn_igual)
         val btn_borrar: Button = findViewById(R.id.btn_borrar)
+
         tv_num = findViewById(R.id.textView4)
 
 
@@ -43,8 +44,8 @@ class Ejercicio2 : AppCompatActivity() {
             Log.d("TAG", "Valor segundo numero: " + Segundovalor);
             when(operacion){
                 1-> res = Primervalor + Segundovalor
-                /*2-> res = numero1- num2
-                3-> res = numero1 * num2
+                2-> res = Primervalor - Segundovalor
+                /*3-> res = numero1 * num2
                 4-> res = numero1 / num2*/
             }
             tv_num.setText(res.toString())
@@ -127,10 +128,10 @@ class Ejercicio2 : AppCompatActivity() {
                 tv_num.setText("")
                 operacion = 1
             }
-            /* R.id.btnRestar ->{
-                tv_num1.setText(num2+"-")
-                oper = 2
-            }
+            R.id.btn_menos -> {
+                tv_num.setText("")
+                operacion = 2
+            }/*
             R.id.btnMult ->{
                 tv_num1.setText(num2+"*")
                 oper = 3
