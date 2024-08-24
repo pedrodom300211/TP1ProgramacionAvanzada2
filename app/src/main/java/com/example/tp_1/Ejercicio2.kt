@@ -1,5 +1,6 @@
 package com.example.tp_1
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,7 @@ class Ejercicio2 : AppCompatActivity() {
     var res :Double= 0.0
 
 
-    ///operacion 0=nada 1=suma 2=multiplicacion 3=dividir 4=resta
+    ///operacion 0=nada 1=suma 2=multiplicacion 3=dividir 4=resta 5=error
     var operacion: Int = 0
     var TextoPantalla: String = ""
 
@@ -39,14 +40,21 @@ class Ejercicio2 : AppCompatActivity() {
 
         btn_Igual.setOnClickListener{
             Segundovalor= tv_num.text.toString().toDouble()
-            Log.d("TAG", "Valor Primer numero: " + Primervalor);
-            Log.d("TAG", "Valor Operador: " + operacion);
-            Log.d("TAG", "Valor segundo numero: " + Segundovalor);
-            when(operacion){
-                1-> res = Primervalor + Segundovalor
-                2-> res = Primervalor - Segundovalor
-                3-> res = Primervalor * Segundovalor
-                4-> res = Primervalor / Segundovalor
+
+            when(operacion) {
+                1 -> res = Primervalor + Segundovalor
+                2 -> res = Primervalor - Segundovalor
+                3 -> res = Primervalor * Segundovalor
+                4 -> {
+                    if(Segundovalor !=0.0)
+                    res = Primervalor / Segundovalor
+                    else{
+                        tv_num.setTextColor(Color.parseColor("#FF0000"))
+                        tv_num.setText("No se puede dividir por 0 ")
+                        operacion=5
+                        return@setOnClickListener
+                    }
+                }
             }
             tv_num.setText(res.toString())
 
@@ -61,12 +69,13 @@ class Ejercicio2 : AppCompatActivity() {
     }
 
     fun clickNumero(view: View) {
-
+        tv_num.setTextColor(Color.parseColor("#8A8A8A"))
+        if(operacion==5 ||operacion==0) tv_num.setText("")
         var num = tv_num.text.toString()
 
         when (view.id ) {
             R.id.btn_0 -> {
-                if(operacion==0)
+
                 tv_num.setText(num + "0")
 
 

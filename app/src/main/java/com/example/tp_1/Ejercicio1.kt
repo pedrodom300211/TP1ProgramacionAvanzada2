@@ -27,10 +27,15 @@ class Ejercicio1 : AppCompatActivity() {
         var txtResultado : TextView = findViewById(R.id.txt_resultado)
 
         btnSumar.setOnClickListener{
+            val primerValor = edtNumero1.text.toString().trim()
+            val segundoValor = edtNumero2.text.toString().trim()
+            if(primerValor.isEmpty()||segundoValor.isEmpty()){
+                txtResultado.setText("Datos invalidos")
+            }else{
             var n1=edtNumero1.text.toString().toInt()
             var n2=edtNumero2.text.toString().toInt()
             var res=n1+n2
-            txtResultado.text=res.toString()
+            txtResultado.text=res.toString()}
         }
     }
 }
