@@ -45,8 +45,8 @@ class Ejercicio2 : AppCompatActivity() {
             when(operacion){
                 1-> res = Primervalor + Segundovalor
                 2-> res = Primervalor - Segundovalor
-                /*3-> res = numero1 * num2
-                4-> res = numero1 / num2*/
+                3-> res = Primervalor * Segundovalor
+                4-> res = Primervalor / Segundovalor
             }
             tv_num.setText(res.toString())
 
@@ -131,15 +131,15 @@ class Ejercicio2 : AppCompatActivity() {
             R.id.btn_menos -> {
                 tv_num.setText("")
                 operacion = 2
-            }/*
-            R.id.btnMult ->{
-                tv_num1.setText(num2+"*")
-                oper = 3
             }
-            R.id.btnDividir -> {
-                tv_num1.setText(num2+"/")
-                oper = 4
-            }*/
+            R.id.btn_multiplicacion -> {
+                tv_num.setText("")
+                operacion = 3
+            }
+            R.id.btn_dividir -> {
+                tv_num.setText("")
+                operacion = 4
+            }
         }
     }
 

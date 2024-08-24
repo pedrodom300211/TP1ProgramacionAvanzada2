@@ -155,6 +155,7 @@
             android:onClick="clickNumero"
             android:text="3"
             android:textSize="30sp"/>
+
         <Button
             android:id="@+id/btn_multiplicacion"
             android:layout_width="0dp"
@@ -162,8 +163,9 @@
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:background="#CCCCCC"
+            android:onClick="clickOperacion"
             android:text="*"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
     </TableRow>
 
     <TableRow
@@ -200,6 +202,7 @@
             android:background="#CCCCCC"
             android:text="="
             android:textSize="30sp"/>
+
         <Button
             android:id="@+id/btn_dividir"
             android:layout_width="0dp"
@@ -207,8 +210,9 @@
             android:layout_margin="4dp"
             android:layout_weight="1"
             android:background="#CCCCCC"
+            android:onClick="clickOperacion"
             android:text="/"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
     </TableRow>
 
 </TableLayout>
